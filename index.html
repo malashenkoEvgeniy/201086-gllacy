@@ -3,10 +3,148 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+	<link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+	<header class="header-page">
+		<div class="index-logo">
+			<img src="img/logo.svg" width="154" height="64" alt="logo">
+		</div>
+		<nav class="main-novigation">
+			<ul>
+				<li><a href="#">Каталог</a>
+					<ul>
+						<li><a href="#">Новинки</a></li>
+						<li><a href="#">Сливочное</a></li>
+						<li><a href="#">Щербеты</a></li>
+						<li><a href="#">Фруктовый лед</a></li>
+						<li><a href="#">Мелорин</a></li>
+					</ul></li>
+				
+				<li><a href="#">Доставка и оплата</a></li>
+				<li><a href="#">О Компании</a></li>
+			</ul>
+		</nav>
+		<div class="user-block">
+			<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+				<input type="submit" name="search-submit" value="Поиск">
+				<input type="search" placeholder="Что ищем?">
+			</form>
+			<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+					<input type="email" name="email"  placeholder="электронная почта">
+					<input type="password" name="password" value="" placeholder="ПАРОЛЬ">
+					<input type="submit" name="enter" value="ВОЙТИ">
+					<a href="#">забыли пароль?</a>
+					<a href="#">новая регистрация</a>
+						
+						</form>
+					
+			<a class="login" href="#">Вход</a>
+			<a class="basket" href="#">Корзина</a>
+			<p>с 10 до 20, ежедневно</p>
+			<p><a href="tel:8812450-25-25">8 812 450-25-25</a></p>
+		</div>
+	</header>
+	
+	<main>
+		<section class="slider-bar">
+			<h3>Слайдер</h3>
+			<div class="slider-item">
+				<h3>Крем-брюле и пломбир с малиновым джемом</h3>
+				<a href="#">Давайте оба!</a>
+			</div>
+			<div class="slider-item">
+				<h3>Малинка даром!</h3>
+				<p>При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малиноаого варенья бесплатно.</p>
+				<a href="#">Хочу варенья!</a>
+			</div>
+			<div class="slider-item">
+				<h3>Шоколадки даром!</h3>
+				<p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шеколадной присыпки совершенно бесплатно.</p>
+				<a href="#">Хочу шоколадки!</a>
+			</div>
+		</section>
+		<section class="index-content">
+			<h3>Хиты продаж</h3>
+			<div class="content-item">
+				<a href="#"><img src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+				<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+			</div>
+			<div class="content-item">
+				<a href="#"><img src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
+				<p>Сливочно-кофейное с кусочками шоколада</p>
+			</div>
+			<div class="content-item">
+				<a href="#"><img src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
+				<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+			</div>
+			<div class="content-item">
+				<a href="#"><img src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
+				<p>Сливочное крем-брюле с карамельной подливкой</p>
+			</div>
+		</section>
+		<section class="our-production">
+			<h3>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
+			<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+			<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p> 
+			<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+			<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+		</section>
+		<section class="blog">
+			<h3>BLOG</h3>
+			<div class="blog-info">
+				<p>Новое в нашем блоге</p>
+				<a href="#">10  способов сервировки фруктовых щербетов к столу</a>
+			</div>
+			<div class="blog-form">
+				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+				<form class="news-form" action="https://echo.htmlacademy.ru" method="post">
+					<input type="email" name="email"  placeholder="Электронная почта">
+					<button class="btn" type="submit">Отправить</button>
+				</form>
+			</div>
+		</section>
+		<section class="about-us">
+			<h3>about-us</h3>
+			<img src="img/map.jpg" width="1200" height="430" alt="Карта">
+			<div>Адрес главного офиса<br>
+				и офлайн магазина:<br>
+				ул. Большая Конюшенная 19/8, Санкт-Петербург<br>
+				Для заказов по телефону:<br>
+				<a href="tel:8812450-25-25">8 812 450-25-25</a><br>
+				(с 10 до 20 ежедневно)
+				<a href="#">Форма обратной связи</a>
+					<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+					<h2>Мы обязательно вам ответим!</h2>
+						<input type="text" name="name"  placeholder="Как вас зовут?">
+						<input type="email" name="email"  placeholder="Ваша почта для ответа?">
+						<textarea name="suggestions" placeholder="Напишите что нибудь"></textarea>
+						<input type="submit" name="submit" value="Отправить">
+					</form>
+			</div>		
+		</section>
+	</main>
+	<footer class="main-footer">
+		<section class="footer-social">
+			<h3>social</h3>
+			<a class="social social-tw" href="#">Твитер</a>
+			<a class="social-btn social-inst" href="#">Инстаграм</a>
+			<a class="social-btn social-fb" href="#">Фейсбук</a>
+			<a class="social-btn social-vk" href="#">Вконтакте</a>
+		</section>
+		<section class="footer-menu">
+			<h3>footer-menu</h3>
+			<a class="for-suppliers" href="#">Для поставщиков</a>
+			<a class="about-production" href="#">О производстве</a>
+			<a class="our-documents" href="#">Наши документы</a>
+			<a class="environmental-standards" href="#">Экологические стандарты</a>
+		</section>
+		<section class="footer-copyright">
+			<h3>footer-copyright</h3>
+			<a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+			<p>Сделано в HTML Academy &#169; 2017</p>
+		</section>
+	</footer>
+   
   </body>
 </html>
