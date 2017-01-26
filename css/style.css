@@ -1,8 +1,8 @@
 body{
 	background-color:#849d8f;
 	font-size: 14px;
-	font-family: "Roboto";
-	font-weight: mediym;
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
 	line-height: 28px;
   }
  h1{
