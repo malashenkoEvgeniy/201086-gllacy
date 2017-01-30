@@ -1,28 +1,122 @@
-body{
+html,
+body {
+  min-width: 882px;
+  min-height: 1750px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+   background-size: 93% auto;
 	background-color:#849d8f;
 	font-size: 14px;
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto","Arial", sans-serif;
 	font-weight: normal;
 	line-height: 28px;
-  }
- h1{
+	color:#ffffff;
+ }
+ 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-header {
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 940px;
+  padding: 0 20px;
+	margin: 0 auto;
+}
+
+.main-navigation {
+	float: left;
+	width: 560px;
+  min-height: 120px;
+}
+
+.user-block {
+	float: right;
+	width: 280px;
+  min-height: 120px;
+}
+
+.slider-bar{
+	background:url('../img/ice_main.png') no-repeat 50% 50%;
+}
+
+.promotional-offers{
+	padding:10px;
+}
+
+.promotional-offers h2,
+.index-content h2{
+	display:none;
+}
+
+.promotional-left{
+	width:46%;
+	float:left;
+	background:url('../img/raspberry_bg.jpg') no-repeat ;
+}
+
+.promotional-right{
+	width:46%;
+	float:right;
+	background:url('../img/chocolate-bg.jpg') no-repeat ;
+}
+
+.index-content{
+	box-sizing:border-box;
+	width:860px;
+}
+
+.catalog-item{
+	position:relative;
+	vertical-align:top;
+	display:inline-block;
+	width:200px;
+	margin-right:20px;
+	border:1px solid red;
+}
+
+.catalog-item:last-child{
+	margin-right:0;
+}	
+
+.catalog-item img{
+	padding:0;
+	margin:0;
+	border-radius:50%;
+	transform:translate(-32px) scale(0.75);
+}
+
+.catalog-item span{
+	font-size:45px;
+	position:absolute;
+	top:180px;
+	left:0;
+}
 	
+ h1{
   font-size: 35px;
   font-family: "Roboto";
   color: rgb(255, 255, 255);
   font-weight: bold;
   line-height: 41px;
   text-align: left;
-  
 }
-  h2{
+
+h2{
   font-size: 60px;
   font-family: "Roboto";
   color: #ffffff;
   font-weight: bold;
   line-height: 60px;
   text-align: center;
- 
 }
 
 
