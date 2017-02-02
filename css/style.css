@@ -33,7 +33,7 @@ body {
 }
 
 .main-navigation {
-	float: left;
+	display:inline-block;
 	width: 560px;
   min-height: 120px;
 }
