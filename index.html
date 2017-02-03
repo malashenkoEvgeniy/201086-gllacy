@@ -9,10 +9,10 @@
 		<header class="header-page">
 			<div class="container clearfix">
 				<nav class="main-navigation">
-					<a><img src="img/Logo.png" width="154" height="64" alt="Logo"></a>
+					<a class="index-logo"><img src="img/Logo.png" width="154" height="64" alt="Logo"></a>
 					<ul>
 						<li><a href="#">Каталог</a>
-							<ul>
+							<ul class="sub-menu">
 								<li><a href="#">Новинки</a></li>
 								<li><a href="catalog.html">Сливочное</a></li>
 								<li><a href="#">Щербеты</a></li>
@@ -25,8 +25,8 @@
 					</ul>
 				</nav>
 				<div class="user-block">
+					<a href="#">Поиск</a>
 					<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-						<input type="submit" name="search-submit" value="Поиск">
 						<input type="search" placeholder="Что ищем?">
 					</form>
 					<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -39,8 +39,8 @@
 					<a class="login" href="#">Вход</a>
 					<a class="basket" href="#">Корзина</a>
 					<div class="user-info">
-						<p>с 10 до 20, ежедневно</p>
-						<p><a href="tel:8812450-25-25">8 812 450-25-25</a></p>
+						<p>с 10 до 20, ежедневно<br>
+						<a href="tel:8812450-25-25">8 812 450-25-25</a></p>
 					</div>	
 				</div>
 			</div>
@@ -60,13 +60,17 @@
 				<section class="promotional-offers clearfix">	
 					<h2>promotional offers</h2>
 					<div class="promotional-left">
-						<h3>Малинка даром!</h3>
-						<p>При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малиноаого варенья бесплатно.</p>
+						<div class="promotional-item">
+							<h3>Малинка даром!</h3>
+							<p>При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малиноаого варенья бесплатно.</p>
+						</div>
 						<a href="#">Хочу варенья!</a>
 					</div>
 					<div class="promotional-right">
-						<h3>Шоколадки даром!</h3>
-						<p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шеколадной присыпки совершенно бесплатно.</p>
+						<div class="promotional-item">
+							<h3>Шоколадки даром!</h3>
+							<p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шеколадной присыпки совершенно бесплатно.</p>
+						</div>
 						<a href="#">Хочу шоколадки!</a>
 					</div>
 				</section>	
