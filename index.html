@@ -8,8 +8,8 @@
   <body>
 		<header class="header-page">
 			<div class="container clearfix">
-				<nav class="main-navigation">
-					<a class="index-logo"><img src="img/Logo.png" width="154" height="64" alt="Logo"></a>
+				<nav class="main-navigation clearfix">
+					<div class="index-logo"><a ><img src="img/Logo.png" width="154" height="64" alt="Logo"></a></div>
 					<ul>
 						<li><a href="#">Каталог</a>
 							<ul class="sub-menu">
@@ -39,8 +39,8 @@
 					<a class="login" href="#">Вход</a>
 					<a class="basket" href="#">Корзина</a>
 					<div class="user-info">
-						<p>с 10 до 20, ежедневно<br>
-						<a href="tel:8812450-25-25">8 812 450-25-25</a></p>
+						<p>с 10 до 20, ежедневно</p>
+						<a href="tel:8812450-25-25">8 812 450-25-25</a>
 					</div>	
 				</div>
 			</div>
@@ -76,39 +76,43 @@
 				</section>	
 				<section class="index-content">
 					<h2>Хиты продаж</h2>
-					<article class="catalog-item">
+					<article class="catalog-item hit">
 						<img src="img/orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 						<span>310&#8381;/кг</span>
 						<h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
 						<a href="#">Быстрый просмотр</a>
 					</article>
-					<article class="catalog-item">
+					<article class="catalog-item hit">
 						<img src="img/coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
 						<span>380&#8381;/кг</span>
 						<h3>Сливочно-кофейное с кусочками шоколада</h3>
 						<a href="#">Быстрый просмотр</a>
 					</article>
-					<article class="catalog-item">
+					<article class="catalog-item hit">
 						<img src="img/strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 						<span>355&#8381;/кг</span>
 						<h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
 						<a href="#">Быстрый просмотр</a>
 					</article>
-					<article class="catalog-item">
+					<article class="catalog-item hit">
 						<img src="img/creme-brulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 						<span>415&#8381;/кг</span>
 						<h3>Сливочное крем-брюле с карамельной подливкой</h3>
 						<a href="#">Быстрый просмотр</a>
 					</article>
 				</section>	
-				<section class="our-production">
+				<section class="our-production" >
 					<h2>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
-					<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-					<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p> 
-					<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-					<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+					<div class="production-item">
+						<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+						<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p> 
+					</div>
+					<div class="production-item">
+						<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+						<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+				  </div>
 				</section>
-				<section class="blog">
+				<section class="blog clearfix">
 					<h3>BLOG</h3>
 					<div class="blog-info">
 						<p>Новое в нашем блоге</p>
@@ -125,21 +129,23 @@
 				<section class="about-us">
 					<h3>about-us</h3>
 					<img src="img/map.jpg" width="1200" height="430" alt="Карта">
-					<div>Адрес главного офиса<br>
-						и офлайн магазина:<br>
-						<b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b><br>
-						Для заказов по телефону:<br>
-						<a href="tel:8812450-25-25"><b>8 812 450-25-25</b></a><br>
-						(с 10 до 20 ежедневно)
-						<a href="#">Форма обратной связи</a>
-						<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-							<h2>Мы обязательно вам ответим!</h2>
-							<input type="text" name="name"  placeholder="Как вас зовут?">
-							<input type="email" name="email"  placeholder="Ваша почта для ответа?">
-							<textarea name="suggestions" placeholder="Напишите что нибудь"></textarea>
-							<input type="submit" name="submit" value="Отправить">
-						</form>
-					</div>		
+					<div class="our-adress">
+						<p>Адрес главного офиса<br>
+						и офлайн магазина:</p>
+						<p><b>ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</b></p>
+						<p>Для заказов по телефону:</p>
+						<p><a href="tel:8812450-25-25"><b>8 812 450-25-25</b></a></p>
+						<p>(с 10 до 20 ежедневно)</p>
+						<p><a href="#" class="feedback-btn">Форма обратной связи</a></p>
+					</div>
+					<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+						<h2>Мы обязательно вам ответим!</h2>
+						<input type="text" name="name"  placeholder="Как вас зовут?">
+						<input type="email" name="email"  placeholder="Ваша почта для ответа?">
+						<textarea name="suggestions" placeholder="Напишите что нибудь"></textarea>
+						<input type="submit" name="submit" value="Отправить">
+					</form>
+				</section>
 				</section>
 			</div>
 		</main>
