@@ -7,34 +7,44 @@
   </head>
   <body>
 		<header class="header-page">
-			<div class="container clearfix">
-				<nav class="main-navigation">
-					<a href="index.html"><img src="img/Logo.png" width="154" height="64" alt="Logo"></a>
-					<ul>
+				<div class="container header-layout">
+					<nav class="main-navigation">
+						<div class="index-logo"><a href="index.html"><img src="img/Logo.png" width="154" height="64" alt="Logo"></a></div>
+						<ul>
 						<li><a href="#">Каталог</a>
-							<ul>
+							<ul class="sub-menu">
 								<li><a href="#">Новинки</a></li>
 								<li><a>Сливочное</a></li>
 								<li><a href="#">Щербеты</a></li>
 								<li><a href="#">Фруктовый лед</a></li>
 								<li><a href="#">Мелорин</a></li>
 							</ul>
-						</li>
+						</li>				
 						<li><a href="#">Доставка и оплата</a></li>
 						<li><a href="#">О Компании</a></li>
 					</ul>
 				</nav>
 				<div class="user-block">
-					<a class="search" href="#">Поиск</a>
+					<a href="#">Поиск</a>
+					<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+						<input type="search" placeholder="Что ищем?">
+					</form>
+					<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+						<input type="email" name="email"  placeholder="электронная почта">
+						<input type="password" name="password" value="" placeholder="ПАРОЛЬ">
+						<input type="submit" name="enter" value="ВОЙТИ">
+						<a href="#">забыли пароль?</a>
+						<a href="#">новая регистрация</a>
+					</form>
 					<a class="login" href="#">Вход</a>
 					<a class="basket" href="#">Корзина</a>
 					<div class="user-info">
 						<p>с 10 до 20, ежедневно</p>
-						<p><a href="tel:8812450-25-25">8 812 450-25-25</a></p>
+						<a href="tel:8812450-25-25">8 812 450-25-25</a>
 					</div>	
 				</div>
 			</div>
-		</header>
+			</header>
 		<main>
 			<div class="container clearfix">
 				<div class="breadcrumbs">
@@ -157,7 +167,7 @@
 			</div>
 		</main>
 		<footer class="main-footer">
-			<div class="container clearfix">
+			<div class="container ">
 				<section class="footer-social">
 					<h3>social</h3>
 					<a class="social-btn social-tw" href="#">Твитер</a>

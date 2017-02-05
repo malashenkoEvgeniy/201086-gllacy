@@ -6,11 +6,14 @@
 		<link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-		<header class="header-page">
-			<div class="container clearfix">
-				<nav class="main-navigation clearfix">
-					<div class="index-logo"><a ><img src="img/Logo.png" width="154" height="64" alt="Logo"></a></div>
-					<ul>
+		
+		
+			
+			<header class="header-page">
+				<div class="container header-layout">
+					<nav class="main-navigation">
+						<div class="index-logo"><a ><img src="img/Logo.png" width="154" height="64" alt="Logo"></a></div>
+						<ul>
 						<li><a href="#">Каталог</a>
 							<ul class="sub-menu">
 								<li><a href="#">Новинки</a></li>
@@ -44,20 +47,39 @@
 					</div>	
 				</div>
 			</div>
-		</header>
-		<main>
-			<div class="container clearfix">
+			</header>
+			<main>
+			<div class="container">
 				<section class="slider-bar">
+					<div class="radio-slider">
+						<input type="radio" name="slider-radio" value="both-slider" checked>
+						<input type="radio" name="slider-radio" value="raspberies-slider">
+						<input type="radio" name="slider-radio" value="chocolate-slider">
+					</div>
+					
 					<h3>Слайдер</h3>
-					<div class="slider-item">
+					<div class="wrapper">
+					<div class="sliders slider-item1">
+						<div class="silder-info">
 						<h2>Крем-брюле и пломбир с малиновым джемом</h2>
 						<a href="#">Давайте оба!</a>
+						</div>
+					</div>	
+			<div class="sliders slider-item2">
+						<div class="silder-info">
+						<h2>Крем-брюле!</h2>
+						<a href="#">Заказать!</a>
+						</div>
+				</div>	
+				<div class="sliders slider-item3">
+						<div class="silder-info">
+						<h2>Пломбир с малиновым джемом</h2>
+						<a href="#">Заказать!</a>
+						</div>
+				</div>	
 					</div>
-					<input type="radio" name="slider-radio" value="both-slider" checked>
-					<input type="radio" name="slider-radio" value="raspberies-slider">
-					<input type="radio" name="slider-radio" value="chocolate-slider">
 				</section>
-				<section class="promotional-offers clearfix">	
+				<section class="promotional-offers ">	
 					<h2>promotional offers</h2>
 					<div class="promotional-left">
 						<div class="promotional-item">
@@ -128,7 +150,8 @@
 				</section>
 				<section class="about-us">
 					<h3>about-us</h3>
-					<img src="img/map.jpg" width="1200" height="430" alt="Карта">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.320894616195037!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sgr!4v1468565893571" 
+						width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
 					<div class="our-adress">
 						<p>Адрес главного офиса<br>
 						и офлайн магазина:</p>
@@ -148,7 +171,8 @@
 				</section>
 				</section>
 			</div>
-		</main>
+			</main>
+		
 		<footer class="main-footer">
 			<div class="container clearfix">
 				<section class="footer-social">
