@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
- <head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Глейси</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Глейси</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" >
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
- </head>
- <body>			
-
-	<input type="radio" id="btn-1" name="toggle" checked>
+  </head>
+  <body>
+		<input type="radio" id="btn-1" name="toggle" checked>
     <input type="radio" id="btn-2" name="toggle">
-    <input type="radio" id="btn-3" name="toggle">
-		
-			
+    <input type="radio" id="btn-3" name="toggle">			
 	<div class="site-wrapper">
     <div class="content-wrapper">
 			<header class="main-header ">
@@ -96,39 +93,39 @@
 					<h2>Хиты продаж</h2>
 					<article class="catalog-item hit">
 						<img src="img/orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-						<span>310&#8381;/кг</span>
-						<h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-						<a href="#">Быстрый просмотр</a>
+						<span class="price">310 &#8381;/<span class="units">кг</span></span>
+						<p><a class="purchase-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
+						<a class="quick-view" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="catalog-item hit">
 						<img src="img/coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-						<span>380&#8381;/кг</span>
-						<h3>Сливочно-кофейное с кусочками шоколада</h3>
-						<a href="#">Быстрый просмотр</a>
+						<span class="price">380 &#8381;/<span class="units">кг</span></span>
+						<p><a class="purchase-link" href="#">Сливочно-кофейное с кусочками шоколада</a></p>
+						<a class="quick-view" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="catalog-item hit">
 						<img src="img/strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-						<span>355&#8381;/кг</span>
-						<h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-						<a href="#">Быстрый просмотр</a>
+						<span class="price">355 &#8381;/<span class="units">кг</span></span>
+						<p><a class="purchase-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
+						<a class="quick-view" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="catalog-item hit">
 						<img src="img/creme-brulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-						<span>415&#8381;/кг</span>
-						<h3>Сливочное крем-брюле с карамельной подливкой</h3>
-						<a href="#">Быстрый просмотр</a>
+						<span class="price">415 &#8381;/<span class="units">кг</span></span>
+						<p><a class="purchase-link" href="#">Сливочное крем-брюле с карамельной подливкой</a></p>
+						<a class="quick-view" href="#">Быстрый просмотр</a>
 					</article>
 				</section>	
 				<section class="our-production" >
-					<h2>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
+					<h2>Магазин Глейси   &nbsp;— это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
 					<div class="production-wrapper">
 					<div class="production-item">
-						<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-						<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p> 
+						<p class="ice-paragraph">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+						<p class="sheet-paragraph">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p> 
 					</div>
 					<div class="production-item">
-						<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-						<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+						<p class="cow-paragraph">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+						<p class="thermometr-paragraph">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
 				  </div>
 					</div>
 				</section>
@@ -137,6 +134,8 @@
 					<div class="blog-info">
 						<p>Новое в нашем блоге</p>
 						<a href="#">10  способов сервировки фруктовых щербетов к столу</a>
+					</div>
+					<div class="blog-wrapper">
 					</div>
 					<div class="blog-form">
 						<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
@@ -148,7 +147,7 @@
 				</section>
 		
 		
-	<section class="about-us">
+		<section class="about-us">
 		<h3>about-us</h3>
         <img src="img/map.jpg" width="1200" height="430" alt="MAP">
 					<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.320894616195037!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sgr!4v1468565893571" 
@@ -169,7 +168,7 @@
 						<textarea name="suggestions" placeholder="Напишите что нибудь"></textarea>
 						<input type="submit" name="submit" value="Отправить">
 					</form>
-	</section>
+		</section>
 		</main>
 		<footer class="main-footer">
 			<section class="footer-social">
@@ -192,6 +191,5 @@
 		</footer>
 		</div>
 	</div>
-	
   </body>
 </html>
