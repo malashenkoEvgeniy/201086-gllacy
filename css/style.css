@@ -1,5 +1,4 @@
-html {
-  background-color: #849d8f; 
+html { 
 }
 
 body {
@@ -10,7 +9,7 @@ body {
   font-family: "Roboto","Arial", sans-serif;
   line-height: 1.2;
   color: #ffffff;
- 
+  background-color: #849d8f; 
 }
 
 body > input[type="radio"] {
@@ -66,7 +65,7 @@ body > input[type="radio"] {
   width: 560px;
 }
 
-.main-navigation>ul {
+.main-navigation > ul {
   position: relative;
    display: flex;
   justify-content: space-between;
@@ -94,7 +93,7 @@ body > input[type="radio"] {
   padding-left: 5px;
 }
 
-.first-menu>a:hover {
+.first-menu > a:hover {
   text-decoration: none;
   border: 1px solid #323232;
   border-radius: 25px;
@@ -157,17 +156,17 @@ body > input[type="radio"] {
   min-width: 260px;
 }
 
-.user-block{
+.user-block {
   position: relative;
   display: flex;
   justify-content: space-between;
 }
 
-.user-block a{
+.user-block a {
   font-size: 16px;
   line-height: 18px;
 }
-.user-block .users{
+.user-block .users {
   text-decoration: none;
   background-color: #9db1a5;
 }
@@ -228,23 +227,41 @@ body > input[type="radio"] {
   font-size: 16px;
   line-height: 24px;
   color: #d3d3d2;
+  transition: all 0.5s;
 }
 
 .search-form input[type="search"]:hover {
   border: 2px solid #d3d3d2; 
 }
 
-.search-form input[type="search"]:focused {
+.search-form input[type="search"]:focus {
   border: 2px solid #8fbdec; 
 }
 
-.search-form:focused label{
+input[type="search"]:focus + label { 
   position: absolute;
   top: 5px;
-  left: 30px;/*НЕ РАБОТАЕТ!!!!!*/
+  left: 30px;
   font-size: 11px;
   line-height: 13px;
   color: #8fbdec;
+}
+
+.search-form input[type="search"]:active {
+  font-size: 16px;
+  line-height: 24px;/*не работает*/
+  font-weight: bold;
+  color: #323232;
+  border: 2px solid #d3d3d2; 
+}
+
+input[type="search"]:active + label { 
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #d3d3d2;
 }
 /*Здесь место оставлено намерено, чтоб обозначить не доделаный участок
 */
@@ -270,7 +287,7 @@ body > input[type="radio"] {
   padding: 7px 10px 7px 40px;
   margin-left: 10px;
   border-radius: 20px;
-  
+  color: #ffffff; 
 }
     
 .user-block .login::before {
@@ -303,9 +320,9 @@ body > input[type="radio"] {
 .login-wrapper .login-form {
   position: absolute;
   top: 30px;
-  left: -340px; 
-  display: block;
-  min-width: 270px;  
+  left: -200px; 
+  display: none;
+  max-width: 280px;  
   padding: 20px;
   padding-top: 20px;
   background-color: #ffffff;
@@ -316,20 +333,35 @@ body > input[type="radio"] {
   display: block;
 }
 
+.login-butons {
+  display:flex;
+  justify-content: space-between;
+  
+}
+
+.login-check {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-wrapper:hover .login-form {
+  display: block;
+}
+
 .login-form input[type="email"],
 .login-form input[type="password"] {
   width: 240px;
-  height: 20px;
+  height: 40px;
   border: 1px solid #d3d3d2; 
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .login-wrapper a {
   color: #323232;
 }
 
-.search-form label {
+ .label-email {
   position: absolute;
   top: 30px;
   left: 40px;
@@ -338,24 +370,95 @@ body > input[type="radio"] {
   color: #d3d3d2;
 }
 
-.search-form input[type="search"]:hover {
-  border: 2px solid #d3d3d2; 
+.label-password {
+  position: absolute;
+  top: 95px;
+  left: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #d3d3d2;
 }
 
-.search-form input[type="search"]:focused {
+.login-form input[type="email"]:hover,
+.login-form input[type="password"]:hover { 
+   border: 2px solid #d3d3d2; 
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus{
   border: 2px solid #8fbdec; 
 }
 
-.search-form:focused label{
+input[type="email"]:focus + label { 
   position: absolute;
   top: 5px;
-  left: 30px;/*НЕ РАБОТАЕТ!!!!!*/
+  left: 30px;
   font-size: 11px;
   line-height: 13px;
   color: #8fbdec;
 }
+
+input[type="password"]:focus + label{ 
+  position: absolute;
+  top:70px;
+  left: 30px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8fbdec;
+}
+
+/*нет стилизации поля при введении текста */
+
 /*Здесь место оставлено намерено, чтоб обозначить не доделаный участок
 */
+.login-butons {
+  margin-top: 30px;
+}
+
+.login-butons input[type="submit"] {
+  display: inline-block;
+  padding: 15px 25px ;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  
+}
+
+.login-butons input[type="submit"]:hover {
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.login-butons input[type="submit"]:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.login-butons a {
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.login-butons a:hover {
+  color: #e84d37;
+}
+
+.login-butons a:active {
+  color: #e84d37;
+}
+
 
 .user-block .basket {
 	position: relative;
@@ -366,6 +469,7 @@ body > input[type="radio"] {
   margin-left: 8px;
 }
    
+
 .user-block .basket::before {
   position: absolute;
   content: "";
@@ -549,6 +653,7 @@ main{
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
+  background-color: red;
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   color: #ffffff;
@@ -654,7 +759,7 @@ main{
   border-radius: 50%; 
 }
 
-.catalog-item a.purchase-link {
+ .purchase-link {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
@@ -662,13 +767,14 @@ main{
   padding-bottom: 0;
 }  
 
-.catalog-item a.quick-view {
+.quick-view {
   position: relative;
   bottom: 10px;
   display: none;
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
+  background-color: red;
   background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
@@ -685,7 +791,7 @@ main{
   background-color: #9db1a5;
 }
 
-.catalog-item:hover a.quick-view {
+.catalog-item:hover .quick-view {
   display: block;
 }
 
@@ -721,8 +827,8 @@ main{
   margin-right: 16px;
 }
 
-.production-item p.cow-paragraph,
-.production-item p.ice-paragraph {
+.production-item .cow-paragraph,
+.production-item .ice-paragraph {
    padding-bottom: 6px;
  }
 
@@ -867,6 +973,7 @@ main{
   font-weight: bold;
   line-height: 24px;
   font-size: 18px;
+  background-color: red;
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 50px;
@@ -958,6 +1065,7 @@ main{
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
+  background-color: red;
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   color: #ffffff ;
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
@@ -1062,6 +1170,7 @@ main{
   line-height: 24px;
   width: 135px;
   color: #ffffff;
+  background-color: red;
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 50px;
@@ -1148,89 +1257,57 @@ main{
 }
 
 .social {
+  position:relative;
   font-size: 0;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background-color: #849d8f;
   border-radius: 50%;
 }
 
 .social-tw{
+  background:url("../img/sprite.png") no-repeat -902px -20px;    
   margin-left: 0;
   margin-right: 10px;
 }
 
-.social-tw::before {
-  position: absolute;
-  content:"";
-  top: 4px;
-  left: 4px;
-  width: 40px;
-  height: 40px;  
-  background:url("../img/sprite.png") no-repeat -900px -13px;    
-}
-
-.social-tw:hover::before {
-  background: url("../img/sprite.png") no-repeat -1014px -3px;    
+.social-tw:hover {
+  background: url("../img/sprite.png") no-repeat -1016px -10px;    
 }
 
 .social-inst {
+  background: url("../img/sprite.png") no-repeat -639px -20px;
   margin-right: 10px;
 }
 
-.social-inst::before  {
-  position: absolute;
-  content: "";
-  top: 4px;
-  left: 53px;
-  width: 40px;
-  height: 40px;
-  background: url("../img/sprite.png") no-repeat -636px -13px;
-}
-
-.social-inst:hover::before {
-  background: url("../img/sprite.png") no-repeat -58px -3px;
+.social-inst:hover {
+  background: url("../img/sprite.png") no-repeat -61px -10px;
 }
 
 .social-fb {
+    
+  background: url("../img/sprite.png") no-repeat -355px -20px ;
   margin-right: 10px;
 }
 
-.social-fb::before {
-  position: absolute;
-  content: "";
-  top: 4px;
-  left: 104px;
-  width: 40px;
-  height: 40px;  
-  background: url("../img/sprite.png") no-repeat -352px -13px ;
-}
-
-.social-fb:hover::before {
-  background: url("../img/sprite.png") no-repeat -6px -3px ;
+.social-fb:hover{
+  background: url("../img/sprite.png") no-repeat -9px -10px ;
 }
 
 .social-vk {
-  margin-right: 15px;
+  background: url("../img/sprite.png") no-repeat -955px -20px;
+  margin-right: 0;
+   
 }
 
-.social-vk::before {
-  position: absolute;
-  content: "";
-  top: 4px;
-  left: 154px;
-  width: 40px;
-  height: 40px;  
-  background: url("../img/sprite.png") no-repeat -950px -13px;
+.social-vk:hover{
+  background: url("../img/sprite.png") no-repeat -1069px -10px ;
 }
 
-.social-vk:hover::before {
-  background: url("../img/sprite.png") no-repeat -1064px -3px ;
-}
+.social:active {
+  box-shadow: inset 0px 2px 1px 0px #888888;
+  
 
-.social:active::before {
-  /*не могу активное состояние у соц-кнопок отобразить*/
-  box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 0.004);
 }
 
 
@@ -1250,14 +1327,7 @@ main{
   color: #ffffff;
 }
 
-.for-suppliers::before {
-  position: absolute;
-  content: "";
-  left: -20px;
-  width: 15px;
-  height: 14px;
-  background: url("../img/sprite.png") no-repeat  -408px -20px;
-}
+
 
 .copyright {
   width: 200px;
@@ -1267,22 +1337,10 @@ main{
 }
 
 .copyright .btn {
-  position: relative;
-  max-width:108px;
-  height: 38px;
-  font-size: 0;
-  background-color: transparent;
-}
+  margin-bottom: 40px;
+  }
 
-.copyright .btn::before {
-  position: absolute;
-  content: "";
-  top:-20px;
-  left:13px;
-  width:108px;
-  height: 38px;
-  background:  url("../img/sprite.png") no-repeat  -444px -20px;
-}
+
 
 .copyright a {
   color:#ffffff;
@@ -1291,7 +1349,7 @@ main{
 }
 
 .copyright p,
-.copyright>p>a {
+p > .btn-text {
   font-size: 12px;
   line-height: 18px;
 }

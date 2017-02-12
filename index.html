@@ -35,20 +35,24 @@
 						<div class="search-wrapper">
 							<a href="#" class="users user-search">Поиск</a>
 							<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-								<label for="what-look">Что ищем?</label>
 								<input id="what-look" type="search" >
+								<label for="what-look">Что ищем?</label>
 							</form>
 						</div>	
 						<div class="login-wrapper">
 							<a class="users login" href="#">Вход</a>
 							<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-								<label for="email">электронная почта</label>
 								<input id="email" type="email" name="email">
-								<label for="password">Пароль</label>
+								<label class="label-email" for="email">Электронная почта</label>
 								<input id="password "type="password" name="password">
-								<input type="submit" name="enter" value="ВОЙТИ">
-								<a href="#">забыли пароль?</a>
-								<a href="#">новая регистрация</a>
+								<label class="label-password" for="password">Пароль</label>
+								<div class="login-butons">
+									<input type="submit" name="enter" value="ВОЙТИ">
+									<div class="login-check">
+										<a href="#">Забыли пароль?</a>
+										<a href="#">Новая регистрация</a>
+									</div>
+								</div>
 							</form>
 						</div>
 						<a class="users basket" href="#">Пусто</a>
@@ -196,8 +200,8 @@
 					<a class="doc-item environmental-standards" href="#">Экологические стандарты</a>
 				</div>
 				<div class="copyright">
-					<a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-					<p>Сделано в <a href="https://htmlacademy.ru"> HTML Academy </a>&#169; 2017</p>
+					<a class="btn" href="https://htmlacademy.ru"><img src="img/html_academy.png" width="108" height="38" alt="HTML Academy"></a>
+					<p>Сделано в <a class="btn-text" href="https://htmlacademy.ru"> HTML Academy </a>&#169; 2017</p>
 				</div>
 		</footer>
 		</div>
