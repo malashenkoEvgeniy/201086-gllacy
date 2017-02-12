@@ -10,45 +10,56 @@
   <body>
 		<div class="catalog-page">
 			<div>
-				<header class="main-header container">
-					<nav class="main-navigation">
-						<a href="index.html" ><img src="img/Logo.png" width="154" height="64" alt="Logo"></a>
-						<ul>
-							<li class="first-menu one-units"><a href="#">Каталог</a>
-								<ul class="sub-menu">
-									<li><a href="#">Новинки</a></li>
-									<li><a href="catalog.html">Сливочное</a></li>
-									<li><a href="#">Щербеты</a></li>
-									<li><a href="#">Фруктовый лед</a></li>
-									<li><a href="#">Мелорин</a></li>
-								</ul>
-							</li>				
-							<li class="first-menu two-units"><a href="#">Доставка и оплата</a></li>
-							<li class="first-menu three-units"><a href="#">О Компании</a></li>
-						</ul>
-					</nav>
-					<div class="second-block">
-						<div class="user-block">
+				<header class="main-header">
+				<nav class="main-navigation">
+					<a href="index.html"><img src="img/Logo.png" width="154" height="64" alt="Logo"></a>
+					<ul>
+						<li class="first-menu one-units"><a>Каталог</a>
+							<ul class="sub-menu">
+								<li><a href="#">Новинки</a></li>
+								<li><a>Сливочное</a></li>
+								<li><a href="#">Щербеты</a></li>
+								<li><a href="#">Фруктовый лед</a></li>
+								<li><a href="#">Мелорин</a></li>
+							</ul>
+						</li>				
+						<li class="first-menu two-units"><a href="#">Доставка и оплата</a></li>
+						<li class="first-menu three-units"><a href="#">О Компании</a></li>
+					</ul>
+				</nav>
+				<div class="second-block">
+					<div class="user-block">
+						<div class="search-wrapper">
 							<a href="#" class="users user-search">Поиск</a>
 							<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-								<input type="search" placeholder="Что ищем?">
+								<input id="what-look" type="search" >
+								<label for="what-look">Что ищем?</label>
 							</form>
-							<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-								<input type="email" name="email"  placeholder="электронная почта">
-								<input type="password" name="password" value="" placeholder="ПАРОЛЬ">
-								<input type="submit" name="enter" value="ВОЙТИ">
-								<a href="#">забыли пароль?</a>
-								<a href="#">новая регистрация</a>
-							</form>
-							<a class="users login" href="#">Вход</a>
-							<a class="users basket" href="#">Пусто</a>
-						</div>
-						<div class="user-info">
-							<p>C 10 до 20, ежедневно</p>
-							<a href="tel:8812450-25-25">8 812 450-25-25</a>
 						</div>	
+						<div class="login-wrapper">
+							<a class="users login" href="#">Вход</a>
+							<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+								<input id="email" type="email" name="email">
+								<label class="label-email" for="email">Электронная почта</label>
+								<input id="password "type="password" name="password">
+								<label class="label-password" for="password">Пароль</label>
+								<div class="login-butons">
+									<input type="submit" name="enter" value="ВОЙТИ">
+									<div class="login-check">
+										<a href="#">Забыли пароль?</a>
+										<a href="#">Новая регистрация</a>
+									</div>
+								</div>
+							</form>
+						</div>
+						<a class="users basket" href="#">Пусто</a>
 					</div>
-				</header>
+					<div class="user-info">
+						<p>C 10 до 20, ежедневно</p>
+						<a href="tel:8812450-25-25">8 812 450-25-25</a>
+					</div>	
+				</div>
+			</header>
 				<main>
 					<div class="breadcrumbs">
 						<a href="index.html">Главная</a>
@@ -171,24 +182,24 @@
 					</div>
 				</main>
 				<footer class="main-footer">
-					<section class="footer-social">
-						<h3>social</h3>
-						<a class="social social-tw" href="https://twitter.com/?lang=ru" target="_blank">Твитер</a>
-						<a class="social social-inst" href="https://www.instagram.com/" target="_blank">Инстаграм</a>
-						<a class="social social-fb" href="https://www.facebook.com/" target="_blank">Фейсбук</a>
-						<a class="social social-vk" href="https://vk.com/feed" target="_blank">Вконтакте</a>
-					</section>
-					<div class="documentation-unit">
-						<a class="doc-item for-suppliers" href="#">Для поставщиков</a>
-						<a class="doc-item about-production" href="#">О производстве</a>
-						<a class="doc-item our-documents" href="#">Наши документы</a>
-						<a class="doc-item environmental-standards" href="#">Экологические стандарты</a>
-					</div>
-					<div class="copyright">
-						<a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-						<p>Сделано в <a href="https://htmlacademy.ru"> HTML Academy </a>&#169; 2017</p>
-					</div>
-				</footer>
+			<section class="footer-social">
+					<h3>social</h3>
+					<a class="social social-tw" href="https://twitter.com/?lang=ru" target="_blank">Твитер</a>
+					<a class="social social-inst" href="https://www.instagram.com/" target="_blank">Инстаграм</a>
+					<a class="social social-fb" href="https://www.facebook.com/" target="_blank">Фейсбук</a>
+					<a class="social social-vk" href="https://vk.com/feed" target="_blank">Вконтакте</a>
+				</section>
+				<div class="documentation-unit">
+					<a class="doc-item for-suppliers" href="#">Для поставщиков</a>
+					<a class="doc-item about-production" href="#">О производстве</a>
+					<a class="doc-item our-documents" href="#">Наши документы</a>
+					<a class="doc-item environmental-standards" href="#">Экологические стандарты</a>
+				</div>
+				<div class="copyright">
+					<a class="btn" href="https://htmlacademy.ru"><img src="img/html_academy.png" width="108" height="38" alt="HTML Academy"></a>
+					<p>Сделано в <a class="btn-text" href="https://htmlacademy.ru"> HTML Academy </a>&#169; 2017</p>
+				</div>
+		</footer>
 			</div>
 		</div>
   </body>

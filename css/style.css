@@ -1327,7 +1327,14 @@ main{
   color: #ffffff;
 }
 
-
+.for-suppliers::before{
+  position:absolute;
+  left:-20px;
+  content:"";
+  width:15px;
+  height:13px;
+  background:  url("../img/sprite.png") no-repeat  -408px -20px;
+}
 
 .copyright {
   width: 200px;
