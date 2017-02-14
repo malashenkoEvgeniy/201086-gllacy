@@ -1,6 +1,3 @@
-html { 
-}
-
 body {
   max-width: 1200px;
   margin: 0 auto;
@@ -74,6 +71,24 @@ body > input[type="radio"] {
   width: 360px;
   list-style: none;
  
+}
+
+.active::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  content: "Каталог";
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  
 }
 
 .first-menu {
@@ -247,24 +262,6 @@ input[type="search"]:focus + label {
   color: #8fbdec;
 }
 
-.search-form input[type="search"]:active {
-  font-size: 16px;
-  line-height: 24px;/*не работает*/
-  font-weight: bold;
-  color: #323232;
-  border: 2px solid #d3d3d2; 
-}
-
-input[type="search"]:active + label { 
-  position: absolute;
-  top: 5px;
-  left: 30px;
-  font-size: 11px;
-  line-height: 13px;
-  color: #d3d3d2;
-}
-/*Здесь место оставлено намерено, чтоб обозначить не доделаный участок
-*/
 .user-block .user-search:hover::before {
   width: 32px;
   height: 32px;
@@ -327,6 +324,7 @@ input[type="search"]:active + label {
   padding-top: 20px;
   background-color: #ffffff;
   border-radius: 5px;
+  z-index: 99;
 }
 
 .login-wrapper:hover .login-form {
@@ -381,7 +379,9 @@ input[type="search"]:active + label {
 
 .login-form input[type="email"]:hover,
 .login-form input[type="password"]:hover { 
-   border: 2px solid #d3d3d2; 
+   border: 3px solid #d3d3d2; 
+  padding: 0px;
+  
 }
 
 .login-form input[type="email"]:focus,
@@ -407,10 +407,6 @@ input[type="password"]:focus + label{
   color: #8fbdec;
 }
 
-/*нет стилизации поля при введении текста */
-
-/*Здесь место оставлено намерено, чтоб обозначить не доделаный участок
-*/
 .login-butons {
   margin-top: 30px;
 }
@@ -460,21 +456,102 @@ input[type="password"]:focus + label{
 }
 
 
-.user-block .basket {
-	position: relative;
+.basket-wrapper .basket {
+  display: inherit;
   padding-left: 40px;
   padding-right: 30px;
   border-radius: 20px;
-  padding-top: 6px;
+  padding: 7px 30px 6px 40px;
   margin-left: 8px;
 }
+
+.basket-of-goods {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: -350px;
+  min-width:  540px;
+  min-height: 250px;
+  background-color: #ffffff;
+  color: #323232;
+  font-size: 13px;
+  line-height: 16px;
+  border-radius: 15px;
+  z-index: 333;
+}
+
+.table-goods{
+  display: table;
+  border-bottom: 2px solid #cacac7;
+}
+
+.basket-of-goods ul {
+  display: table-row;
+}
+
+.basket-of-goods li {
+  display: table-cell;
+  list-style: none;
+}
+
+.table-goods{
+  margin: 20px;
+  margin-top: 30px;
+  margin-left: 30px;
+  padding-bottom: 30px;
+}
+
+.closed{
+  position: relative;
+  left: 5px;
+  opacity: 20%;
+}
    
+.sum {
+  float: right;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.basket-of-goods input[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: bottom;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  margin-top: 10px;
+  margin-left: 320px
+}
+
+.basket-of-goods input[type="submit"]:hover {
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.basket-of-goods input[type="submit"]:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
 
 .user-block .basket::before {
   position: absolute;
   content: "";
   top: 5px;
-  left: 12px;
+  left: 152px;
   width: 21px;
   height: 21px;
   background: #9db1a5 url("../img/sprite.png") no-repeat  -125px -19px;
@@ -488,9 +565,13 @@ input[type="password"]:focus + label{
 .user-block .basket:hover::before {
   width: 22px;
   height: 22px;
-  top: 0;
-  left: 17px;
+  top: 2px;
+  left: 149px;
   background: #ffffff url("../img/sprite.png") no-repeat -165px -15px; 
+}
+
+.basket-wrapper:hover .basket-of-goods {
+  display: block;
 }
 
 .user-info {
@@ -512,6 +593,14 @@ input[type="password"]:focus + label{
   font-size: 22px;
   line-height: 24px;
 }
+.user-info a:hover {
+  color: #ffbc9e;
+}
+
+.user-info a:active {
+  color: #ffbc9e;
+}
+
 
 .search-form,
 .login-form {
@@ -622,7 +711,6 @@ main{
   background-color: #ffffff;
 }
 
-
 .promotional-offers {
   display: flex;
   justify-content: space-between;
@@ -716,6 +804,13 @@ main{
    width: 1146px;
 }
 
+
+.goods-container {
+  flex-wrap: wrap;
+  justify-content: flex-start
+}
+
+
 .catalog-item {
   position: relative;
   width: 267px;
@@ -768,8 +863,8 @@ main{
 }  
 
 .quick-view {
-  position: relative;
-  bottom: 10px;
+  position: absolute;
+  bottom: -50px;
   display: none;
   text-decoration: none;
   font-size: 18px;
@@ -793,6 +888,7 @@ main{
 
 .catalog-item:hover .quick-view {
   display: block;
+  z-index: 200;
 }
 
 .our-production {
@@ -1088,11 +1184,12 @@ main{
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.about-us .modal-content {
-  position: absolute;
-  top: -1540px;
-  left: 350px;
-  display: none;
+.modal-wrapper{
+  position: relative;
+  padding-left: 670px
+}
+
+.modal-content {
   box-sizing: border-box;
   width: 475px;        
   padding: 20px;
@@ -1164,6 +1261,24 @@ main{
   margin-bottom: 20px;
 }
 
+input[type="text"]:hover + label{ 
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8fbdec;
+}/*чет вообще не понятно????????????????????????*/
+
+input[type="email"] + label{ 
+  position: absolute;
+  top:70px;
+  left: 30px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8fbdec;
+}
+
 .feedback-form input[type="submit"] {
   font-weight: bold;
   font-size: 18px;
@@ -1198,6 +1313,7 @@ main{
 .feedback-form input[type="email"]:hover,
 .feedback-form textarea:hover {
   border:2px solid #c7c6c5;
+  padding: 0;
 }
 
 .feedback-form label {
@@ -1206,25 +1322,362 @@ main{
   line-height: 13px;
 }
 
- input[type="text"]:focused label,
- input[type="email"]:focused label,
- textarea:focused label {
+ input[type="text"]:focus + label,
+ input[type="email"]:focus + label,
+ textarea:focus + label {
   display: block;
 }
 
 .form-sorting {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  min-width: 860px;
+  position: relative;
+  max-width: 860px;
+  min-height: 130px;
 }
 
 .form-sorting fieldset {
+  display: inline-block;
   border-radius: 25px;
   background-color: #aabbb1;
   font-size: 16px;
   line-height: 18px;
+  padding: 5px 10px;
+  margin-bottom: 35px;
+  margin-left: 0;
 }
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.sort {
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+.sorting-item {
+  width:190px;
+  margin-left: 0;
+  margin-right: 250px;
+  text-align: center;
+}
+
+.sorting-item select{
+  color: #ffffff;
+  background: inherit;
+}
+
+.sorting-item:hover select{
+  color: #323232;
+}
+
+.sorting-price{
+  position:absolute;
+  top: 0;
+  left:230px;
+  width: 200px; 
+  margin-right: 20px;
+  text-align: center;  
+}
+
+range-filter {
+  width: 190px;
+  
+}
+
+.range-controls {
+  position: relative;
+  height: 15px;
+  padding-top: 13px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-controls .toggle {
+   position: absolute;
+  top: 5px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  cursor: pointer;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+  left: 80px;
+}
+
+.range-controls .toggle-max {
+  left: 135px;
+}
+
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+ 
+  font-size: 16px;
+  display: inline-block;
+  width: 50%;
+}
+
+.price-controls input {
+  
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  width: 35px;
+  padding: 8px 10px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;;
+}
+
+.min-price{
+  position: absolute;
+  top: -30px;
+  left: 40px;
+}
+
+.max-price{
+  position: absolute;
+  top: -30px;
+  left: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.sort-price {
+  top: -20px;
+  left:240px;
+}
+
+ .sorting-fatness {
+  width: 350px;
+  margin-right: 0; 
+}
+
+.sort-fatness {
+  top: -20px;
+  left: 500px;
+}
+
+.sort-fillers {
+  top: 40px;
+  left: 0;
+}
+
+.sorting-fatness input + label {
+  position: relative;
+  margin-right: 25px;
+  padding-left: 25px;
+}
+
+.sorting-fatness input + label::before {
+   content: "";
+   position: absolute;
+   top: 2px;
+   left: 5px;
+   width: 7px;
+   height: 7px;
+   border-radius: 50%;
+   box-shadow: 0px 0px 0px 2px #ffffff;
+   background-color: transparent;
+   border: 3px solid transparent;
+   cursor: pointer;
+}
+
+.sorting-fatness input + label:hover::before{
+   box-shadow: 0px 0px 0px 3px #ffffff;
+}
+
+.sorting-fatness input {
+  display: none;
+}
+/*
+#zero-percent:checked ~ .sorting-fatness  label[for="zero-percent"]::before,
+#ten-percent:checked ~ .sorting-fatness  label[for="ten-percent"]::before,/*не могу понять почему не работает
+#thirty-percent:checked ~ .sorting-fatness  label[for="thirty-percent"]::before,
+#morethirty-percent:checked ~ .sorting-fatness  label[for="morethirty-percent"]::before{
+   background-color: #ffffff;
+   border: 3px solid transparent;
+}
+*/
+input[type="radio"]:checked ~ label::before {
+   background-color: #ffffff;
+   border: 3px solid transparent;
+}
+.sorting-fillers {
+  margin-right: 20px;
+}
+
+.sorting-fillers input {
+  display: none;
+  color: #ffffff;
+}
+
+.sorting-fillers input + label {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.sorting-fillers input + label::before {
+   content: "";
+   position: absolute;
+   top: 2px;
+   left: -17px;
+   width: 7px;
+   height: 7px;
+   border-radius: 2px;
+   box-shadow: 0px 0px 0px 2px #ffffff;
+   background-color: transparent;
+   border: 3px solid transparent;
+   cursor: pointer;
+}
+
+.sorting-fillers input + label::after {
+   content: "";
+   position: absolute;
+   display: none;
+   top: -1px;
+   left: -16px;
+   width: 7px;
+   height: 7px;
+   border: 2px solid #ffffff;
+   border-left-color: transparent;
+   border-top-color: transparent;
+   transform: rotate(35deg);
+  
+  
+}
+
+#chocolate:checked ~ .sorting-fillers  label[for="chocolate"]::after,
+#sugar-powder:checked ~ .sorting-fillers  label[for="sugar-powder"]::after,/*не могу понять почему не работает*/
+#fruit:checked ~ .sorting-fillers  label[for="fruit"]::after,
+#syrups:checked ~ .sorting-fillers  label[for="syrups"]::after,
+#jams:checked ~ .sorting-fillers  label[for="jams"]::after {
+   display: block;
+  
+}
+
+
+.sorting-fillers input + label:hover::before {
+   box-shadow: 0px 0px 0px 3px #ffffff;
+}
+
+.sorting-fillers input + label:hover::after {
+    border: 3px solid #ffffff;
+   border-left-color: transparent;
+   border-top-color: transparent;
+   transform: rotate(35deg)
+}
+
+.btn-sort {
+  color: #ffffff;
+  background-color: transparent;
+  padding: 10px 15px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  
+}
+
+.btn-sort:hover {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.btn-sort:active {
+  color: #323232;
+  background-color: #ffffff;
+  box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
+}
+
+.page-number {
+  display: block;
+  width:265px;
+  margin-right: 0;
+  margin-left: auto;
+  padding-bottom: 30px;
+  
+}
+
+.page-number a{
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.page-number .back {
+  font-size: 0;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-top-color: transparent;
+  border-right-color: transparent;
+ transform: rotate(45deg);/*чет не работает*/
+}
+
+.page-number .forward {
+  font-size: 0;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-top-color: transparent;
+  border-left-color: transparent;
+ transform: rotate(45deg);/*чет не работает*/
+}
+
+.page-number a:hover {
+  padding: 5px 10px;
+  width: 10px;
+  background-color: #ffffff;
+  color: #323232;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .main-footer {
   display: flex;
@@ -1236,6 +1689,7 @@ main{
   min-height: 100px;
   padding-left: 0;
   margin: 0;
+  border-top: 1px solid #ffffff;
 }
 .main-footer a:hover {
   color: #ffbc9e;
@@ -1263,6 +1717,7 @@ main{
   height: 32px;
   background-color: #849d8f;
   border-radius: 50%;
+  border: 2px solid #dae2de;
 }
 
 .social-tw{
@@ -1305,9 +1760,7 @@ main{
 }
 
 .social:active {
-  box-shadow: inset 0px 2px 1px 0px #888888;
-  
-
+  box-shadow: inset 0px 2px 1px 0px #888888;  
 }
 
 
@@ -1346,8 +1799,6 @@ main{
 .copyright .btn {
   margin-bottom: 40px;
   }
-
-
 
 .copyright a {
   color:#ffffff;
