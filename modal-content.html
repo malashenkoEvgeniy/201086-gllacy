@@ -9,7 +9,7 @@
   </head>
   <body>
 		<div class="">
-     <div class="">
+     <div class="content-wrapper">
 			<header class="main-header">
 				<nav class="main-navigation">
 					<a href="index.html"><img src="img/Logo.png" width="154" height="64" alt="Logo"></a>
@@ -39,7 +39,7 @@
 						<div class="login-wrapper">
 							<a class="users login" href="#">Вход</a>
 							<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-								<input id="email" type="email" name="email">
+								<input class="login-email" id="email" type="email" name="email">
 								<label class="label-email" for="email">Электронная почта</label>
 								<input id="password "type="password" name="password">
 								<label class="label-password" for="password">Пароль</label>
@@ -68,11 +68,11 @@
 						<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
 						<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
 							<b>Мы обязательно вам ответим!</b>
-							<input type="text" id="name" name="name">
+							<input class="modal-name" type="text" id="name" name="name">
 							<label for="name">Как вас зовут?</label>
-							<input type="email" id="email" name="email">
+							<input class="modal-email" type="email" id="email" name="email">
 							<label for="email">Ваша почта для ответа?</label>
-							<textarea  id="suggestions" name="suggestions" id="suggestions"></textarea>
+							<textarea  class="modal-suggestions" id="suggestions" name="suggestions" id="suggestions"></textarea>
 							<label for="suggestions">Напишите что нибудь</label>
 							<input type="submit" name="submit" value="Отправить">
 						</form>

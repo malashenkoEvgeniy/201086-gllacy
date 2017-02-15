@@ -9,10 +9,10 @@
   </head>
   <body>
 		<div class="catalog-page">
-			<div>
+			<div class="content-wrapper">
 				<header class="main-header">
 					<nav class="main-navigation">
-						<a href="index.html"><img src="img/Logo.png" width="154" height="64" alt="Logo"></a>
+						<a class="index-logo" href="index.html"><img src="img/Logo.png" width="154" height="64" alt="Logo"></a>
 						<ul>
 							<li class="first-menu one-units active"><a>Каталог</a>
 								<ul class="sub-menu">
@@ -39,7 +39,7 @@
 							<div class="login-wrapper">
 								<a class="users login" href="#">Вход</a>
 								<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-									<input id="email" type="email" name="email">
+									<input class="login-email" id="email" type="email" name="email">
 									<label class="label-email" for="email">Электронная почта</label>
 									<input id="password "type="password" name="password">
 									<label class="label-password" for="password">Пароль</label>
@@ -88,7 +88,7 @@
 						</div>	
 					</div>
 				</header>
-				<main>
+				<main class="elevator">
 					<div class="breadcrumbs">
 						<a href="index.html">Главная</a>&#187;
 						<a  href="#">Каталог</a>&#187;
@@ -99,7 +99,7 @@
 						<label class="sort sort-parameter">Сортировка:</label>
 						<fieldset class="sorting-item">
 							<select>
-								<option selected>По популярности</option>
+								<option selected>по популярности</option>
 								<option>сначала недорогие</option>
 								<option>сначала дорогие</option>
 								<option>по жирности</option>
@@ -126,27 +126,27 @@
 						</fieldset>
 						<label class="sort sort-fatness">Жирность:</label>
 						<fieldset class="sorting-fatness">
-							<input type="radio" name="fatness" value="zero-percent" id="zero-percent">
-							<label for="zero-percent">0%</label>
-							<input type="radio" name="fatness" value="ten-percent" id="ten-percent" checked>
-							<label for="ten-percent">10%</label>
-							<input type="radio" name="fatness" value="thirty-percent" id="thirty-percent">
-							<label for="thirty-percent">30%</label>
-							<input type="radio" name="fatness" value="morethirty-percent" id="morethirty-percent">
-							<label for="morethirty-percent">выше 30%</label>
+							<input class="sort-radio" type="radio" name="fatness" value="zero-percent" id="zero-percent">
+							<label class="radio-marg-first" for="zero-percent">0%</label>
+							<input class="sort-radio" type="radio" name="fatness" value="ten-percent" id="ten-percent" checked>
+							<label class="radio-marg-two" for="ten-percent">10%</label>
+							<input class="sort-radio"type="radio" name="fatness" value="thirty-percent" id="thirty-percent">
+							<label class="radio-marg-three" for="thirty-percent">30%</label>
+							<input class="sort-radio" type="radio" name="fatness" value="morethirty-percent" id="morethirty-percent">
+							<label class="radio-marg-fore" for="morethirty-percent">выше 30%</label>
 						</fieldset>
 						<label class="sort sort-fillers">Наполнители:</label>
 						<fieldset class="sorting-fillers">
 							<input type="checkbox" name="chocolate"  id="chocolate" checked>
-							<label for="chocolate">Шоколадные</label>
+							<label class="check-marg-first" for="chocolate">Шоколадные</label>
 							<input type="checkbox" name="sugar-powder"  id="sugar-powder" checked>
-							<label for="sugar-powder">Сахарные присыпки</label>
+							<label class="check-marg-two" for="sugar-powder">Сахарные присыпки</label>
 							<input type="checkbox" name="fruit"  id="fruit">
-							<label for="fruit">фрукты</label>
+							<label class="check-marg-three" for="fruit">фрукты</label>
 							<input type="checkbox" name="syrups"  id="syrups">
-							<label for="syrups">сиропы</label>
+							<label class="check-marg-fore" for="syrups">сиропы</label>
 							<input type="checkbox" name="jams"  id="jams">
-							<label for="jams">джемы</label>
+							<label class="check-marg-five" for="jams">джемы</label>
 						</fieldset>
 						<button class="btn-sort" type="submit">Применить</button>
 					</form>
@@ -175,7 +175,7 @@
 								<a class="quick-view" href="#">Быстрый просмотр</a>
 							</article>
 						</div>
-						<div class="fourth">		
+						<div class="fourth margin-none">		
 							<article class="catalog-item">
 								<img src="img/creme-brulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 								<span class="price">415 &#8381;/<span class="units">кг</span></span>
@@ -207,7 +207,7 @@
 								<a class="quick-view" href="#">Быстрый просмотр</a>
 							</article>
 						</div>
-						<div class="fourth">
+						<div class="fourth margin-none">
 							<article class="catalog-item">
 								<img src="img/chocolate.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
 								<span class="price">320 &#8381;/<span class="units">кг</span></span>
@@ -239,7 +239,7 @@
 								<a class="quick-view" href="#">Быстрый просмотр</a>
 							</article>
 						</div>
-						<div class="fourth">		
+						<div class="fourth margin-none">		
 							<article class="catalog-item">
 								<img src="img/mint.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
 								<span class="price">420 &#8381;/<span class="units">кг</span></span>
@@ -249,11 +249,11 @@
 						</div>	
 					</div>
 					<div class="page-number">
-						<a class="back" href="#">назад</a>
-						<a href="#">1</a>
-						<a href="#">2</a>	
-						<a href="#">3</a>
-						<a href="#">4</a>
+						<a class="back"  href="#">назад</a>
+						<a class="number active-number">1</a>
+						<a class="number number-two" href="#">2</a>	
+						<a class="number number-three" href="#">3</a>
+						<a class="number number-fore" href="#">4</a>
 						<a  class="forward" href="#">вперед</a>
 					</div>
 				</main>
