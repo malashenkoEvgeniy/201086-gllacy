@@ -13,12 +13,12 @@ body > input[type="radio"] {
 }
 
 .catalog-page {
-  margin-left: 26px;
+  margin-left: 20px;
 }
 
 .site-wrapper {
   background-repeat: no-repeat;
-  background-position:top center;
+  background-position: top center;
   transition: all 0.5s ease;
 }
 
@@ -47,12 +47,13 @@ body > input[type="radio"] {
   display: flex;
   justify-content: space-between;
   width: 1146px;
+  margin-bottom: -15px;
 }
 
 .main-header a {
   font-size: 16px;
   line-height: 18px;
-  color: #ffffff;
+  color: #ffffff;  
 }
 
 .main-navigation {
@@ -71,69 +72,46 @@ body > input[type="radio"] {
 
 .main-navigation > ul {
   position: relative;
-   display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding-left: 0;
-  margin-left: ;
   width: 370px;
   list-style: none; 
 }
 
-.active::before {
-  position: absolute;
-  top: -7px;
-  left: -2px;
-  content: "Каталог";
-  padding: 7px 10px;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+.first-menu {
+  display: inline-block; 
+  padding:  0px ;
+  margin: 0; 
+  padding-bottom: 20px;
+ }
+
+.first-menu > a {
+padding: 10px;  
+}
+
+.first-menu:hover span {
+  color: #323232;
+}
+
+.first-menu:hover > a {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 0;
+  border-radius: 20px;
+}
+
+.active a{
+  box-sizing: border-box;
   background: #f26843;
   background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  padding: 8px 10px;
+  margin: 0;
   border-radius: 20px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);  
-}
-
-.first-menu {
-   padding:  0;
-    margin: 0; 
- }
-
-.first-menu > a{
-  box-sizing: border-box;
-  padding: 10px;
-  margin: 0;
-}
-
-
-.first-menu > a:hover {
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 1px solid #323232;
-  border-radius: 25px;
-  background-color: rgb(248, 247, 244);
-  padding: 10px;
-  margin: 0;
-}
-
-.first-menu  span:hover {
-  color: #323232;
-}
-
-.one-units > a:hover {
-  margin-left: -2px;
-}
-
-.two-units > a:hover {
-  margin-left: -1px;
-  margin-right: -1px;
-}
-
-.three-units > a:hover {
-  margin-right: -2px;
 }
 
 .main-navigation .sub-menu {
@@ -146,8 +124,7 @@ body > input[type="radio"] {
   margin: 0;
   background-color: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
- 
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4); 
 }
 
 .sub-menu a {
@@ -168,6 +145,7 @@ body > input[type="radio"] {
 	display: block;
     z-index: 100;
 }
+
 .sub-menu li:hover {
   background-color: #fbded7;
 }
@@ -187,6 +165,7 @@ body > input[type="radio"] {
 
 .user-block {
   position: relative;
+  left: 7px;
   display: flex;
   justify-content: space-between;
 }
@@ -226,6 +205,7 @@ body > input[type="radio"] {
 
 .search-wrapper {
   position: relative;
+  padding-bottom: 20px;
 }
 
 .search-wrapper .search-form {
@@ -298,7 +278,7 @@ input[type="search"]:focus + label {
   position: relative;
   display: inherit;
   left: -8px;
-  padding: 7px 10px 7px 40px;
+  padding: 7px 7px 7px 40px;
   margin-left: 10px;
   border-radius: 20px;
   color: #ffffff; 
@@ -321,14 +301,15 @@ input[type="search"]:focus + label {
 
 .user-block .login:hover::before {
   width: 22px;
-  height: 22px;
+  height: 24px;
   top: 0;
   left: 17px;
-  background: url("../img/sprite.png") no-repeat -315px -17px; 
+  background: url("../img/sprite.png") no-repeat -315px -15px; 
 }
 
 .login-wrapper {
   position: relative;
+  padding-bottom: 20px;
 }
 
 .login-wrapper .login-form {
@@ -397,8 +378,8 @@ input[type="search"]:focus + label {
 .login-email:hover,
 .login-pas:hover { 
    border: 3px solid #d3d3d2; 
+  margin-bottom: 18px;
   padding: 0px;
-  
 }
 
 .login-email:focus,
@@ -431,7 +412,7 @@ input[type="search"]:focus + label {
 
 .login-butons input[type="submit"] {
   display: inline-block;
-  padding: 15px 25px ;
+  padding: 10px 25px ;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -471,6 +452,10 @@ input[type="search"]:focus + label {
 
 .login-butons a:active {
   color: #e84d37;
+}
+
+.basket-wrapper{
+  padding-bottom: 20px;
 }
 
 
@@ -608,12 +593,13 @@ input[type="search"]:focus + label {
   display: inline-block;
   font-size: 14px;
   line-height: 16px;
-  margin-bottom: 5px;  
+  margin-top: 0px;  
 }
 
 .user-info a {
   position: relative;
   left: 5px;
+  top: -10px;
   font-size: 22px;
   line-height: 24px;
   font-size: 22px;
@@ -631,9 +617,9 @@ main {
 
 .elevator {
   position: relative;
-  top: -24px;
- 
-}
+  top: -20px;
+  left: 0px;
+ }
 
 .slider {
   position: relative;
@@ -799,7 +785,7 @@ main {
 
 .promotional-left {
   width: 560px;
-  height: 230px;
+  min-height: 230px;
   background:url('../img/raspberry_bg.jpg') no-repeat;
   background-size: cover;
   border-radius:15px;
@@ -807,8 +793,8 @@ main {
 
 .promotional-right {
   width: 560px;
-  height: 230px;
-  background: url('../img/chocolate-bg.jpg') no-repeat;
+  min-height: 230px;
+  background: url('../img/chocolate-bg.jpg');
   border-radius: 15px;
   background-size: cover;
 }
@@ -823,42 +809,47 @@ main {
   width: 510px;
 }
 
-
 .index-content {
   display:flex;
   justify-content: space-between;
   margin-bottom: 20px;
   margin-left: -10px;
-  width: 1146px;
+  max-width: 1146px;
 }
-
 
 .goods-container {
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-bottom: 50px;
+  flex-wrap:wrap;
+  margin-left: -10px; 
+  margin-bottom: 55px;
 }
 
-.fourth {
-  margin-right: -10px;
-  margin-bottom: 20px;
-}
-
-.margin-none {
-  margin-right: 0;
+.fourth{
+  margin-bottom: 10px;
 }
 
 .catalog-item {
   position: relative;
+  top: -1px;
+  left: 12px;
   width: 267px;
-  margin-right: 10px; 
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px 5px 0 0;
+  margin-right: 0; 
+  padding-left: 0;
+  padding-right: 0;
+  z-index: 1;
 }
 
-.catalog-item:hover {
+.catalog-item::before {
+  content: "";
+  display: none;
+  position: absolute;
+  padding: 200px 133px;
   background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  z-index: -2;
+}
+
+.catalog-item:hover::before {
+  display: block;
 }
 
 
@@ -877,7 +868,9 @@ main {
 .catalog-item .price {
   position: absolute;
   top: 213px;
-  left: 10px;
+  left: 0;
+  font-family: "Roboto","Arial", sans-serif;
+  font-weight: 600;  
   font-size: 45px;  
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 1);
 }
@@ -892,7 +885,7 @@ main {
   padding-left: 0;
 }
 	
-.hit::before {
+.hit{
   position: absolute;
   top: 10px;
   left: 0px;
@@ -932,28 +925,10 @@ main {
    color: rgba(232, 77, 55, 1); 
 }
 
-.quick-view-wrap {
-  position: relative;;
-}
-
 .quick-view {
   position: absolute;
-  top: -px;
-  left: -10px;
-  display: none;
-  font-size: 1px;
-  background-color: rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.3);
-  padding: 30px 58px;
-  padding-left: 225px;
-  border-radius: 0 0 5px 5px;
-}
-
-.quick-view::before {
-  content: "Быстрый просмотр";
-  position: absolute;
-  top: -10px;
-  left: 40px;  
+  top: 340px;
+  left: 30px;
   display: none;
   text-decoration: none;
   font-size: 18px;
@@ -967,25 +942,20 @@ main {
   border-radius: 50px;
   padding: 10px 15px;
   padding-right: 22px;
- 
 }
-
-
 
 .catalog-item:hover .quick-view,
 .catalog-item:hover .quick-view::before {
-  display: block;
- 
+  display: block; 
 }
 
 .our-production {
   width: 1124px;
-  height: 304px;
-  background-size: cover;
+  min-height: 304px;
   background: url("../img/f_fon.jpg");
   border-radius: 15px;
   color: #323232;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
   padding-top: 5px;
   padding-left: 20px;
 }  
@@ -1007,7 +977,7 @@ main {
 }
 
 .production-wrapper .production-item:nth-child(2) {
-  margin-right: 16px;
+  margin-right: 5px;
 }
 
 .production-item .cow-paragraph,
@@ -1055,7 +1025,7 @@ main {
   top: -14px;
   width: 49px;
   height: 49px;
-  background: transparent url("../img/sprite.png") no-repeat -766px -19px;
+  background: transparent url("../img/sprite.png") no-repeat -835px -19px;
   border-radius: 50%;
 }
 
@@ -1120,10 +1090,10 @@ main {
 
 .blog-wrapper {
   background-color: #ffffff;
-   background-image: repeating-linear-gradient(-45deg, #92cdff 0px,#92cdff 9px, transparent 9px,transparent 17px, #fe9e90 17px,#fe9e90 25px, transparent 25px,transparent 35px);
+  background-image: repeating-linear-gradient(-45deg, #92cdff 0px,#92cdff 9px, transparent 9px,transparent 17px, #fe9e90 17px,#fe9e90 25px, transparent 25px,transparent 35px);
   border-radius: 15px;
   width: 560px;
-  height: 220px;
+  min-height: 220px;
 }
 
 .blog .blog-form {
@@ -1187,6 +1157,36 @@ main {
   background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
+
+.label-email-blog {
+  position: absolute;
+  top: 139px;
+  left: 38px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #d3d3d2;
+}
+
+.enter-email-blog:hover { 
+  border: 3px solid #d3d3d2; 
+  padding: 0px;
+  padding-bottom: 18px;
+}
+
+.enter-email-blog:focus {
+  border: 2px solid #8fbdec; 
+  padding: 0px;
+}
+
+.enter-email-blog:focus +label{ 
+  top: 105px;
+  left: 30px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8fbdec;
+}
+
+
 
 .about-us h3 {
   display: none;
@@ -1486,11 +1486,10 @@ main {
   color: #5b9ddf;
 }
 
-
 .form-sorting {
   position: relative;
   max-width: 870px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .form-sorting fieldset {
@@ -1504,14 +1503,19 @@ main {
   margin-left: 0;
 }
 
+.breadcrumbs{
+  min-width: 220px;
+  margin-left: 3px;
+  margin-top: -3px;
+}
+
 .breadcrumbs a {
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
   margin-right: 10px;
-  margin-left: 10px;
-  
 }
+
 main h1{
   margin-top: 0;
   margin-bottom: 50px;
@@ -1520,8 +1524,8 @@ main h1{
 
 .sort {
   position: absolute;
-  top: -20px;
-  left: 0;
+  top: -25px;
+  left: 19px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -1544,7 +1548,7 @@ main h1{
 
 .sorting-price {
   position:absolute;
-  top: -5px;
+  top: 0;
   left: 210px;
   width: 200px; 
   margin-right: 20px;
@@ -1557,8 +1561,8 @@ range-filter {
 
 .range-controls {
   position: relative;
-  height: 15px;
-  padding-top: 13px;
+  height: 10px;
+  padding-top: 10px;
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 5px;
@@ -1577,8 +1581,8 @@ range-filter {
 }
 
 .range-controls .toggle {
-   position: absolute;
-  top: 5px;
+  position: absolute;
+  top: 0;
   left: 0;
   width: 4px;
   height: 4px;
@@ -1589,7 +1593,7 @@ range-filter {
 }
 
 .range-controls .toggle-min {
-  left: 80px;
+  left: 40px;
 }
 
 .range-controls .toggle-max {
@@ -1619,67 +1623,71 @@ range-filter {
 
 .min-price {
   position: absolute;
-  top: -30px;
-  left: 40px;
+  top: -35px;
+  left: 35px;
 }
 
 .max-price {
   position: absolute;
-  top: -30px;
-  left: 120px;
+  top: -35px;
+  left: 115px;
 }
 
 .sort-price {
-  top: -20px;
-  left: 240px;
+  top: -25px;
+  left: 225px;
 }
 
  .sorting-fatness {
   width: 390px;
+  min-height: 20px;
   margin-right: 0; 
+
 }
 
 .sort-fatness {
-  top: -20px;
-  left: 500px;
+  top: -25px;
+  left: 460px;
 }
 
 .sort-fillers {
-  top: 40px;
-  left: 0;
+  top: 50px;
+  left: 18px;
 }
 
 .sorting-fatness input + label {
   position: relative;
+  top: -1px;
+  left: 7px;
   margin-right: 20px;
   padding-left: 25px;
 }
 
 .sorting-fatness .radio-marg-two {
-  margin-right: 40px;
+  margin-right: 23px;
 }
 
 
 .sorting-fatness .radio-marg-three {
-  margin-right: 40px;
+  margin-right: 21px;
 }
 
 .sorting-fatness input + label::before {
    content: "";
    position: absolute;
-   top: 2px;
-   left: 5px;
-   width: 7px;
-   height: 7px;
+   top: 0px;
+   left: -5px;
+   width: 12px;
+   height: 12px;
    border-radius: 50%;
-   box-shadow: 0px 0px 0px 3px #ffffff;
+   box-shadow: 0px 0px 0px 1px #ffffff;
    background-color: transparent;
    border: 3px solid rgba(143,166,153, 0.6);
    cursor: pointer;
 }
 
 .sorting-fatness input + label:hover::before {
-   box-shadow: 0px 0px 0px 4px #ffffff;
+   box-shadow: 0px 0px 0px 2px #ffffff;
 }
 
 .sorting-fatness input {
@@ -1702,6 +1710,7 @@ range-filter {
 
 .sorting-fillers input + label {
   position: relative;
+  left: 16px;
   margin-left: 20px;
   margin-right: 25px;
 }
@@ -1714,11 +1723,11 @@ range-filter {
    content: "";
    position: absolute;
    top: 2px;
-   left: -17px;
-   width: 7px;
-   height: 7px;
+   left: -30px;
+   width: 10px;
+   height: 10px;
    border-radius: 2px;
-   box-shadow: 0 0 0 2px #ffffff;
+   box-shadow: 0 0 0 1px #ffffff;
    background-color: transparent;
    border: 3px solid transparent;
    cursor: pointer;
@@ -1729,9 +1738,9 @@ range-filter {
    position: absolute;
    display: none ;
    top: -1px;
-   left: -16px;
-   width: 7px;
-   height: 7px;
+   left: -30px;
+   width: 10px;
+   height: 10px;
    border: 2px solid #ffffff;
    border-left-color: transparent;
    border-top-color: transparent;
@@ -1741,7 +1750,6 @@ range-filter {
 .sorting-fillers input:checked + label::after {
    display: block;
 }
-
 
 .sorting-fillers input + label:hover::before {
    box-shadow: 0px 0px 0px 3px #ffffff;
@@ -1777,9 +1785,11 @@ range-filter {
 .page-number {
   float: right;
   display: inline-block;
-  width:265px;
+  text-align: justify;
+  width:190px;
   margin-right: 0;
   margin-left: 0;
+  margin-bottom: 7px;
   
 }
 
@@ -1787,7 +1797,7 @@ range-filter {
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
-  margin-right: 15px;
+  margin-right: 10px;
   text-decoration: none;
 }
 
@@ -1811,15 +1821,14 @@ range-filter {
  transform: rotate(-45deg) scale(0.5) translate(-10px, -20px);;
 }
 
-
 .page-number .active-number {
-  padding: 5px 10px;
+  padding: 2px 7px ;
   width: 10px;
   background-color: #ffffff;
   color: #323232;
   border-radius: 50%;
   margin-right: 1px;
-  margin-left: -6px;
+  margin-left: -1px;
 
 }
 
@@ -1830,8 +1839,7 @@ range-filter {
   color: #323232;
   border-radius: 50%;
   margin-right: 4px;
-  margin-left: -9px;
-  
+  margin-left: -9px;  
 }
 
 .page-number .number-three:hover {
@@ -1863,9 +1871,8 @@ range-filter {
   color: #ffffff; 
   width: 1200px;; 
   min-height: 100px;
-  padding-left: 5px;
-  margin: 0;
-  
+  padding-left: 0px;
+  margin: 0;  
 }
 
 .main-footer a {
@@ -1875,6 +1882,7 @@ range-filter {
 .main-footer span {
   color: rgba(255, 255, 255, 1);
 }
+
 .doc-item:hover,
 .btn-text:hover {
   color: rgba(232, 77, 55, 0.3); 
@@ -1882,8 +1890,9 @@ range-filter {
 
 .doc-item:hover span,
 .btn-text:hover span {
-   color: rgba(232, 77, 55, 1); 
+  color: rgba(232, 77, 55, 1); 
 }
+
 .footer-social h3 {
   display: none;
 }
@@ -1897,12 +1906,14 @@ range-filter {
 .btn-text:active span {
    color: rgba(232, 77, 55, 1); 
 }
+
 .footer-social h3 {
   display: none;
 }
 
 .main-footer .footer-social {
   position: relative;
+  left: 4px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -1924,7 +1935,7 @@ range-filter {
 .social-tw {
   background-position: -903px -20px;    
   margin-left: 0;
-  margin-right: 10px;
+  margin-right: 13px;
 }
 
 .social-tw:hover {
@@ -1933,17 +1944,16 @@ range-filter {
 
 .social-inst {
   background-position: -640px -20px;
-  margin-right: 10px;
+  margin-right: 13px;
 }
 
 .social-inst:hover {
   background-position: -62px -10px;
 }
 
-.social-fb {
-    
+.social-fb {  
   background-position: -356px -20px ;
-  margin-right: 10px;
+  margin-right: 13px;
 }
 
 .social-fb:hover {
@@ -1977,13 +1987,16 @@ range-filter {
 
 .doc-item {
   position: relative;
+  top: 2px;
+  left: 15px;
   font-size: 13px;
   line-height: 18px;
 }
 
 .for-suppliers::before {
   position: absolute;
-  left: -20px;
+  top: 3px;
+  left: -22px;
   content: "";
   width: 15px;
   height: 13px;
@@ -2003,9 +2016,9 @@ range-filter {
 .copyright .btn {
    position: relative;
   bottom: 13px;
-  left: 12px;
+  left: 17px;
   margin-bottom: 20px;
-  }
+}
 
 .copyright a {
   min-width: 190px;    
@@ -2020,8 +2033,12 @@ p > .btn-text {
 .copyright p {
   position: relative;
   bottom: 47px;
-  left: 12px;
+  left: 17px;
 }
 
+.footer-catalog {
+  border-top: 1px solid #ffffff;
+  padding-top: 27px;
+}
 
 
