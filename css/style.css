@@ -63,11 +63,12 @@ body > input[type="radio"] {
 }
 
 .first-menu>a {
-  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
 }
 
 .menu-link {
   color: #ffffff;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .main-navigation > ul {
@@ -112,6 +113,10 @@ padding: 10px;
   padding: 8px 10px;
   margin: 0;
   border-radius: 20px;
+}
+
+.active span {
+  border: none;
 }
 
 .main-navigation .sub-menu {
@@ -852,6 +857,9 @@ main {
   display: block;
 }
 
+.catalog-item:hover {
+  z-index: 100;
+} 
 
 .catalog-item:last-child {
   margin-right: 0;
