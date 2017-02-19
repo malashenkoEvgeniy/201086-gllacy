@@ -30,14 +30,14 @@
 					<div class="second-block">
 						<div class="second-block">
 					<div class="user-block">
-						<div class="search-wrapper">
+						<div class="active-user-block  search-wrapper">
 							<a href="#" class="users user-search">Поиск</a>
 							<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
 								<input class="enter-search" id="what-look" type="search" >
 								<label class="write-search" for="what-look">Что ищем?</label>
 							</form>
 						</div>	
-						<div class="login-wrapper">
+						<div class="active-user-block  login-wrapper">
 							<a class="users login" href="#">Вход</a>
 							<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
 								<input class="login-email" id="email" type="email" name="email">
@@ -53,10 +53,35 @@
 								</div>
 							</form>
 						</div>
-						<div class="basket-wrapper">
-							<a class="users basket" href="#">&#160;Пусто&#160;</a>
-						</div>	
-					</div>
+						<div class="active-user-block  basket-wrapper">
+								<a class="users basket basket-active" href="#">2 товара</a>
+								<div class="basket-of-goods">
+									<div class="table-goods">
+										<ul>
+											<li class="closed">
+												<div class="modal-content-close">
+												</div>
+											</li>
+											<li><img src="img/orange.jpg" width="35" height="35" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></li>
+											<li>Сливочное с апельсиновым джемом</li>
+											<li class="weight-price">1,5кг&#215;<span>200р.</span></li>
+											<li>300р.</li>
+										</ul>
+										<ul>
+											<li class="closed">
+												<div class="modal-content-close">
+												</div>
+											</li>
+											<li><img src="img/strawberry.jpg" width="35" height="35" alt="Сливочно-клубничное с присыпкой из белого шоколада"></li>
+											<li>Клубничный пломбир с присыпкой из белого шоколада</li>
+											<li class="weight-price">1,5кг&#215;<span>300р.</span></li>
+											<li>450р.</li>
+										</ul>
+									</div>
+									<span class="sum">Итого: 750р.</span><br>
+									<input type="submit" name="submit-basket" value="Оформить заказ">
+								</div>	
+							</div>
 					<div class="user-info">
 						<p>C 10 до 20, ежедневно</p>
 						<a href="tel:8812450-25-25">8 812 450-25-25</a>
