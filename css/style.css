@@ -15,6 +15,7 @@ body > input[type="radio"] {
 
 .catalog-page {
   margin-left: 20px;
+  min-width: 1200px;
 }
 
 .site-wrapper {
@@ -78,8 +79,7 @@ body > input[type="radio"] {
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-decoration: none;
-  padding: 10px;
-  padding-bottom: 0;
+  padding: 10px 5px 0 6px; 
 }
 
 .main-navigation > ul {
@@ -112,7 +112,7 @@ body > input[type="radio"] {
 .first-menu:hover > a {
   box-sizing: border-box;
   background-color: #ffffff;
-  padding: 10px;
+  padding: 10px 5px 10px 6px;
   margin: 0;
   border-radius: 20px;
 }
@@ -126,7 +126,6 @@ body > input[type="radio"] {
   padding: 8px 10px;
   margin: 0;
   border-radius: 20px;
-  
 }
 
 .active {
@@ -137,6 +136,7 @@ body > input[type="radio"] {
   position: absolute;
   top: 35px;
   left: -10px;
+  min-height: 170px;
   display: none;  
   list-style: none;
   padding: 10px 0;  
@@ -149,10 +149,12 @@ body > input[type="radio"] {
 .sub-menu a {
   text-decoration: none;
   color: #323232;  
+  vertical-align: bottom;;
 }
 
 .sub-menu li {
   padding: 0 20px;
+  padding-bottom: 15px;
 }
 
 .sub-menu li:first-child {
@@ -169,26 +171,19 @@ body > input[type="radio"] {
   background-color: #fbded7;
 }
 
+.sub-menu-active {
+  background-color: #d07058;
+  
+}
+
 .sub-menu li:active {
   background-color: #d07058;
 }
 
 .second-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  float: right;
   margin-top: 12px;
-  min-width: 270px;
+  min-width: 260px;
 }
 
 .user-block {
@@ -203,8 +198,8 @@ body > input[type="radio"] {
 }
 
 .user-block a {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .user-block .users {
@@ -262,7 +257,7 @@ body > input[type="radio"] {
   border: 1px solid #d3d3d2; 
 }
 
-.write-search{
+.enter-search + .write-search{
   position: absolute;
   top: 30px;
   left: 40px;
@@ -281,7 +276,7 @@ body > input[type="radio"] {
   border: 2px solid #8fbdec; 
 }
 
-.write-search { 
+.enter-search:focus + .write-search { 
   position: absolute;
   top: 5px;
   left: 30px;
@@ -311,7 +306,7 @@ body > input[type="radio"] {
   position: relative;
   display: inherit;
   left: -8px;
-  padding: 7px 7px 7px 40px;
+  padding: 7px 14px 7px 45px;
   margin-left: 10px;
   border-radius: 20px;
   color: #ffffff; 
@@ -321,7 +316,7 @@ body > input[type="radio"] {
   position: absolute;
   content: "";
   top: 5px;
-  left: 18px;
+  left: 17px;
   width: 22px;
   height: 22px;
   background: url("../img/sprite.png") no-repeat  -275px -19px;
@@ -334,7 +329,7 @@ body > input[type="radio"] {
 
 .user-block .login:hover::before {
   width: 22px;
-  height: 24px;
+  height: 25px;
   top: 0;
   left: 17px;
   background: url("../img/sprite.png") no-repeat -315px -15px; 
@@ -362,23 +357,13 @@ body > input[type="radio"] {
   display: block;
 }
 
-.login-butons {
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  
+.login-button-enter {
+  float: left;
 }
 
 .login-check {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  float: right;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -429,7 +414,7 @@ body > input[type="radio"] {
 .login-pas:focus {
   border: 3px solid #8fbdec; 
   padding-bottom: 0;
-  padding-top: 0;
+  padding-top: -1px;
 }
 
 .login-email:focus + .label-email { 
@@ -441,7 +426,7 @@ body > input[type="radio"] {
   color: #8fbdec;
 }
 
-.login-pas:focus + .label-email { 
+.login-pas:focus + .label-password { 
   position: absolute;
   top: 70px;
   left: 30px;
@@ -460,26 +445,21 @@ body > input[type="radio"] {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  color: #ffffff;  
   background: #f26843;
   background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  border-radius: 50px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-  
+  border-radius: 40px;
 }
 
 .login-button-enter:hover {
   background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .login-button-enter:active {
   background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .login-butons a {
@@ -590,7 +570,7 @@ body > input[type="radio"] {
   position: absolute;
   content: "";
   top: 5px;
-  left: 152px;
+  left: 157px;
   width: 21px;
   height: 21px;
   background: url("../img/sprite.png") no-repeat  -125px -19px;
@@ -603,9 +583,9 @@ body > input[type="radio"] {
 
 .user-block .basket:hover::before {
   width: 22px;
-  height: 22px;
+  height: 24px;
   top: 2px;
-  left: 149px;
+  left: 154px;
   background: url("../img/sprite1.jpg") no-repeat -29px 5px; 
 }
 
@@ -623,7 +603,9 @@ body > input[type="radio"] {
 
 .user-info {
   position: relative;
+  top: -5px;
   left:-1px;
+  float: right;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -857,9 +839,7 @@ main {
 }
 
 .index-content {
-  margin-bottom: 20px;
-  margin-left: -10px;
-  max-width: 1146px;
+  max-width: 1200px;
 }
 
 .goods-container {
@@ -875,12 +855,17 @@ main {
   float: left;
   position: relative;
   top: -1px;
-  left: 12px;
-  width: 267px;
-  margin-right: 0; 
-  padding-left: 5px;
+  left: -3px;
+  width: 265px;
+  margin-right: 15px; 
   padding-right: 5px;
+  padding-left: 5px;
   z-index: 1;
+}
+
+.margin-none {
+  margin-right: 0;
+  
 }
 
 .catalog-item::before {
@@ -937,7 +922,7 @@ main {
 .hit{
   position: absolute;
   top: 10px;
-  left: 0;
+  left: -5;
   content: "";  
   width: 61px;
   height: 61px;
@@ -1095,6 +1080,7 @@ main {
   position: relative;
   font-size: 16px;
   line-height: 22px;
+  min-height: 220px;
   color: #323232;
   padding: 0;
   margin-bottom: 38px;
@@ -1157,9 +1143,8 @@ main {
 }
 
 .blog .blog-form {
-  position: absolute;
-  top: 5px;
-  right: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
   box-sizing: border-box;
   font-size: 16px;
   line-height: 22px;
@@ -1202,7 +1187,6 @@ main {
   background-color: red;
   background-image: -webkit-linear-gradient( left, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 50px;
   color: #ffffff;  
   padding: 10px;
@@ -1222,10 +1206,14 @@ main {
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
+.news-form {
+  position: relative;
+}
+
 .label-email-blog {
   position: absolute;
-  top: 139px;
-  left: 38px;
+  top: 6px;
+  left: 10px;
   font-size: 16px;
   line-height: 24px;
   color: #d3d3d2;
@@ -1243,7 +1231,7 @@ main {
 }
 
 .enter-email-blog:focus +.label-email-blog{ 
-  top: 105px;
+  top: -15px;
   left: 30px;
   font-size: 11px;
   line-height: 13px;
@@ -1323,7 +1311,6 @@ main {
   background-image: -webkit-linear-gradient( left, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   color: #ffffff ;
-  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 50px;
   padding: 10px 25px;
   margin-left: 3px; 
@@ -1613,6 +1600,10 @@ main {
   text-align: center;
 }
 
+.sorting-item:hover {
+  background-color: #ffffff;
+}
+
 .sorting-item select {
   color: #ffffff;
   background: inherit;
@@ -1620,13 +1611,14 @@ main {
 
 .sorting-item:hover select {
   color: #323232;
+  background-color: #ffffff;
 }
 
 .sorting-price {
   position:absolute;
   top: 0;
   left: 210px;
-  width: 200px; 
+  width: 190px; 
   margin-right: 20px;
   text-align: center;  
 }
@@ -1704,13 +1696,13 @@ main {
 .min-price {
   position: absolute;
   top: -35px;
-  left: 35px;
+  left: 45px;
 }
 
 .max-price {
   position: absolute;
   top: -35px;
-  left: 115px;
+  left: 105px;
 }
 
 .sort-price {
@@ -1719,7 +1711,7 @@ main {
 }
 
  .sorting-fatness {
-  width: 390px;
+  width: 400px;
   min-height: 20px;
   margin-right: 0; 
 
