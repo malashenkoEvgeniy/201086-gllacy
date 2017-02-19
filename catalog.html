@@ -32,8 +32,8 @@
 							<div class="search-wrapper">
 								<a href="#" class="users user-search">Поиск</a>
 								<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-									<input id="what-look" type="search" >
-									<label for="what-look">Что ищем?</label>
+									<input class="enter-search" id="what-look" type="search" >
+									<label class="write-search" for="what-look">Что ищем?</label>
 								</form>
 							</div>	
 							<div class="login-wrapper">
@@ -78,7 +78,7 @@
 										</ul>
 									</div>
 									<span class="sum">Итого: 750р.</span><br>
-									<input type="submit" name="submit-basket" value="Оформить заказ">
+									<input class="submit-basket" type="submit" name="submit-basket" value="Оформить заказ">
 								</div>	
 							</div>
 						</div>
@@ -94,63 +94,67 @@
 						<a  href="#">Каталог</a>&#187;
 						<a>Сливочное</a>
 					</div>
-					<h1>Сливочное мороженое</h1>
-					<form class="form-sorting" action="https://echo.htmlacademy.ru" method="post">
+					<h1 class="main-header-page">Сливочное мороженое</h1>
+					<form class="form-sorting clearfix" action="https://echo.htmlacademy.ru" method="post">
 						<label class="sort sort-parameter">Сортировка:</label>
-						<fieldset class="sorting-item">
-							<select>
-								<option selected>по популярности</option>
-								<option>сначала недорогие</option>
-								<option>сначала дорогие</option>
-								<option>по жирности</option>
-							</select>
-						</fieldset>
-						<label class="sort sort-price">Цена:</label>
-						<fieldset class="sorting-price">
-							<div class="range-filter">
-								<div class="price-controls">
-									<label class="min-price"><input name="min-price" type="text" value="100">руб.-</label>
-									<label class="max-price"><input name="max-price" type="text" value="500">руб.</label>
-								</div>
-								<div class="range-controls">
-									<div class="scale">
-										<div class="bar">
+						<div class="sort-menu-top clearfix">
+							<fieldset class="sorting sorting-item">
+								<select>
+									<option selected>по популярности</option>
+									<option>сначала недорогие</option>
+									<option>сначала дорогие</option>
+									<option>по жирности</option>
+								</select>
+							</fieldset>
+							<label class="sort sort-price">Цена:</label>
+							<fieldset class="sorting sorting-price">
+								<div class="range-filter">
+									<div class="price-controls">
+										<label class="min-price"><input class="enter-min-price" name="min-price" type="text" value="100">руб.-</label>
+										<label class="max-price"><input class="enter-max-price" name="max-price" type="text" value="500">руб.</label>
+									</div>
+									<div class="range-controls">
+										<div class="scale">
+											<div class="bar">
+											</div>
+										</div>
+										<div class="toggle toggle-min">
+										</div>
+										<div class="toggle toggle-max">
 										</div>
 									</div>
-									<div class="toggle toggle-min">
-									</div>
-									<div class="toggle toggle-max">
-									</div>
 								</div>
-							</div>
-						</fieldset>
-						<label class="sort sort-fatness">Жирность:</label>
-						<fieldset class="sorting-fatness">
-							<input class="sort-radio" type="radio" name="fatness" value="zero-percent" id="zero-percent">
-							<label class="radio-marg-first" for="zero-percent">0%</label>
-							<input class="sort-radio" type="radio" name="fatness" value="ten-percent" id="ten-percent" checked>
-							<label class="radio-marg-two" for="ten-percent">до 10%</label>
-							<input class="sort-radio" type="radio" name="fatness" value="thirty-percent" id="thirty-percent">
-							<label class="radio-marg-three" for="thirty-percent">до 30%</label>
-							<input class="sort-radio" type="radio" name="fatness" value="morethirty-percent" id="morethirty-percent">
-							<label class="radio-marg-fore" for="morethirty-percent">выше 30%</label>
-						</fieldset>
-						<label class="sort sort-fillers">Наполнители:</label>
-						<fieldset class="sorting-fillers">
-							<input type="checkbox" name="chocolate"  id="chocolate" checked>
-							<label class="check-marg-first" for="chocolate">шоколадные</label>
-							<input type="checkbox" name="sugar-powder"  id="sugar-powder" checked>
-							<label class="check-marg-two" for="sugar-powder">сахарные присыпки</label>
-							<input type="checkbox" name="fruit"  id="fruit">
-							<label class="check-marg-three" for="fruit">фрукты</label>
-							<input type="checkbox" name="syrups"  id="syrups">
-							<label class="check-marg-fore" for="syrups">сиропы</label>
-							<input type="checkbox" name="jams"  id="jams">
-							<label class="check-marg-five" for="jams">джемы</label>
-						</fieldset>
-						<button class="btn-sort" type="submit">Применить</button>
+							</fieldset>
+							<label class="sort sort-fatness">Жирность:</label>
+							<fieldset class="sorting sorting-fatness">
+								<input class="sort-radio" type="radio" name="fatness" value="zero-percent" id="zero-percent">
+								<label class="radio-marg-first" for="zero-percent">0%</label>
+								<input class="sort-radio" type="radio" name="fatness" value="ten-percent" id="ten-percent" checked>
+								<label class="radio-marg-two" for="ten-percent">до 10%</label>
+								<input class="sort-radio" type="radio" name="fatness" value="thirty-percent" id="thirty-percent">
+								<label class="radio-marg-three" for="thirty-percent">до 30%</label>
+								<input class="sort-radio" type="radio" name="fatness" value="morethirty-percent" id="morethirty-percent">
+								<label class="radio-marg-fore" for="morethirty-percent">выше 30%</label>
+							</fieldset>
+						</div>
+						<div class="sort-menu-bottom clearfix">	
+							<label class="sort sort-fillers">Наполнители:</label>
+							<fieldset class="sorting sorting-fillers">
+								<input type="checkbox" name="chocolate"  id="chocolate" checked>
+								<label class="check-marg-first" for="chocolate">шоколадные</label>
+								<input type="checkbox" name="sugar-powder"  id="sugar-powder" checked>
+								<label class="check-marg-two" for="sugar-powder">сахарные присыпки</label>
+								<input type="checkbox" name="fruit"  id="fruit">
+								<label class="check-marg-three" for="fruit">фрукты</label>
+								<input type="checkbox" name="syrups"  id="syrups">
+								<label class="check-marg-fore" for="syrups">сиропы</label>
+								<input type="checkbox" name="jams"  id="jams">
+								<label class="check-marg-five" for="jams">джемы</label>
+							</fieldset>
+							<button class="sorting btn-sort" type="submit">Применить</button>
+						</div>
 					</form>
-					<div class="index-content goods-container">
+					<div class="index-content goods-container clearfix">
 						<div class="fourth">
 							<article class="catalog-item">
 								<img src="img/orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">

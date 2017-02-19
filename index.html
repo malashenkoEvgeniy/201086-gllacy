@@ -35,8 +35,8 @@
 						<div class="search-wrapper">
 							<a href="#" class="users user-search">Поиск</a>
 							<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-								<input id="what-look" type="search" >
-								<label for="what-look">Что ищем?</label>
+								<input class="enter-search" id="what-look" type="search" >
+								<label class="write-search" for="what-look">Что ищем?</label>
 							</form>
 						</div>	
 						<div class="login-wrapper">
@@ -46,8 +46,8 @@
 								<label class="label-email" for="email">Электронная почта</label>
 								<input class="login-pas" id="password-label" type="password" name="password">
 								<label class="label-password" for="password-label">Пароль</label>
-								<div class="login-butons">
-									<input type="submit" name="enter" value="ВОЙТИ">
+								<div class="login-buttons">
+									<input class="login-button-enter" type="submit" name="enter" value="ВОЙТИ">
 									<div class="login-check">
 										<a href="#">Забыли пароль?</a>
 										<a href="#">Новая регистрация</a>
@@ -88,7 +88,7 @@
 							<label for="btn-3"></label>
 						</div>
 					</div>
-					<section class="promotional-offers ">	
+					<section class="promotional-offers clearfix ">	
 						<h2>promotional offers</h2>
 						<div class="promotional-left">
 							<div class="promotional-item">
@@ -105,7 +105,7 @@
 							<a href="#">Хочу шоколадки!</a>
 						</div>
 					</section>	
-					<section class="index-content">
+					<section class="index-content clearfix">
 						<h2>Хиты продаж</h2>
 						<article class="catalog-item">
 							<div class="hit">
@@ -161,21 +161,21 @@
 							</div>
 						</div>
 					</section>
-					<section class="blog ">
+					<section class="blog clearfix">
 						<h3>BLOG</h3>
 						<div class="blog-info">
 							<p>Новое в нашем блоге</p>
 							<a href="#">10 &#160;способов сервировки фруктовых щербетов к столу</a>
 						</div>
 						<div class="blog-wrapper">
-						</div>
-						<div class="blog-form">
-							<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-							<form class="news-form" action="https://echo.htmlacademy.ru" method="post">
-								<input class="enter-email-blog" type="email" name="email"  id="email-blog">
-								<label class="label-email-blog" for="email-blog">Электронная почта</label>
-								<button class="btn" type="submit">Отправить</button>
-							</form>
+							<div class="blog-form clearfix">
+								<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+								<form class="news-form" action="https://echo.htmlacademy.ru" method="post">
+									<input class="enter-email-blog" type="email" name="email"  id="email-blog">
+									<label class="label-email-blog" for="email-blog">Электронная почта</label>
+									<button class="btn" type="submit">Отправить</button>
+								</form>
+							</div>	
 						</div>
 					</section>
 					<section class="about-us">
@@ -203,7 +203,7 @@
 							<label for="email-adress">Ваша почта для ответа?</label>
 							<textarea  class="modal-suggestions" id="suggestions" name="suggestions"></textarea>
 							<label for="suggestions">Напишите что нибудь</label>
-							<input type="submit" name="submit" value="Отправить">
+							<input class="suggestions-btn" type="submit" name="submit" value="Отправить">
 						</form>
 					</div>	
 				</div>
